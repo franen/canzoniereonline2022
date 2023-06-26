@@ -1,0 +1,161 @@
+%indicazione per la compilazione:
+% 1. compila con LuaLaTeX
+% 2. compila con LuaLaTeX
+% 3. apri il prompt dei comandi nella cartella di lavoro e dai il comando xindy -M texindy -C utf8 -L italian -M xindystyle alfabetico.idx
+% 4. compila con LuaLaTeX
+
+\documentclass[standard,authorsindex,titleindex,tematicindex]{canzoniereonline}
+\usepackage{fontspec}
+\usepackage[italian]{babel}
+\defaultfontfeatures{Ligatures=TeX}
+
+\geometry{paperheight=148mm, paperwidth=210mm, inner=8mm, outer=10mm, top=10mm, bottom=10mm}%scrivi qui dimensioni pagine e margini
+
+\usepackage[]{microtype}
+
+\usepackage[bookmarks]{hyperref}
+
+
+\begin{document}
+\thispagestyle{empty}
+%\includepdf[]{copertina}
+%\includepdf[pages=1]{cover_miotto_v1} %metti qui il nome del pdf della copertina
+\cleardoublepage
+\vspace*{20mm}
+\hskip100mm\begin{minipage}{50mm}\LARGE \scshape
+canzoni 
+
+liturgiche 
+
+scout 
+
+e tante altre\dots
+\vspace*{50mm}
+\end{minipage}
+
+%\newpage
+\thispagestyle{empty}
+{\small
+\null\vfill
+
+\begin{minipage}{0.5\textwidth}
+\setlength{\parindent}{0pt}
+\vfill
+Questo libretto è stato composto con \LaTeX{} utilizzando il pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen. 
+È distribuito con licenza Creative Commons.
+\bigskip
+
+Il font utilizzato è il \textsf{Libertine}\footnote{\url{www.linuxlibertine.org}}.
+\bigskip
+
+\textit{Impaginazione}:\\
+pinco pallo
+\bigskip
+
+
+Per ogni suggerimento, correzione o richiesta del sorgente potete scrivere a:\\ \texttt{\footnotesize pincopallo at gmail dot com}
+\bigskip
+
+I testi delle canzoni sono di proprietà dei rispettivi autori.
+\bigskip
+
+Finito di impaginare il \today.
+\bigskip
+%\byncsa
+
+{\hspace*{3.3em}\Large\ccbyncsaeu}
+\end{minipage}
+
+\cleardoublepage
+
+
+
+\begin{songs}{}
+
+%METTI QUI TUTTE LE CANZONI
+
+%titolo{A Betlemme di Giudea}
+%autore{Tradizionale Francese}
+%album{}
+%tonalita{Re}
+%famiglia{Liturgica}
+%gruppo{}
+%momenti{Natale}
+%identificatore{a_betlemme_di_giudea}
+%data_revisione{2011_12_31}
+%trascrittore{Francesco Endrici}
+%video{https://www.youtube.com/watch?v=l1Okqh9nxfA}
+\beginsong{A Betlemme di Giudea}[by={}]
+\beginverse
+\[D]A Betlemme \[A]di Giu\[D]{dea} \[D]una gran luce \[A7]si le\[D]vò:
+\[B-]nella notte, \[A]sui pa\[D]stori, \[B-]scese l'annuncio e \[A]si can\[D]tò.
+\endverse
+
+
+
+\beginchorus
+\[D]\[B-]\[E-]\[A7]\[D]\[G]Glo\[A]{ria} \[D]in ex\[G]celsis \[D]{De}\[A]o
+\[D]\[B-]\[E-]\[A7]\[D]\[G]Glo\[A]{ria} \[D]in ex\[G]celsis \[D]\[A]De\[D]o
+\endchorus
+
+\beginverse
+\chordsoff
+Cristo nasce sulla paglia, \brk figlio del Padre Dio con noi,
+Verbo eterno, Re di pace, \brk pone la tenda in mezzo ai suoi.
+\endverse
+
+\beginverse
+\chordsoff
+Tornerà nella sua gloria, \brk quando quel giorno arriverà:
+se lo accogli nel tuo cuore \brk tutto il suo Regno ti darà.
+\endverse
+\endsong
+
+%titolo{Al passo del guidon}
+%autore{A. Mazzocolin, E. Demattè}
+%album{}
+%tonalita{Do}
+%famiglia{Scout}
+%gruppo{}
+%momenti{}
+%identificatore{al_passo_del_guidon}
+%data_revisione{2013_01_16}
+%trascrittore{Francesco Endrici}
+\beginsong{Al passo del guidon}[by={Mazzocolin, Demattè}]
+\beginverse
+Al \[C]passo del guidon, \brk fratello scout t'attende l'avven\[G]tura
+tra il \[D-]verde delle macchie e sotto il \[G]{sol\dots}
+Al \[C]passo del guidon, \brk avanti ad esplorare la na\[G]tura:
+un \[D-]nido, un'erba, un fior t'aspetta ed \[G]è \brk tut\[C]to per \[G]te.
+\endverse
+\beginchorus
+\[C]A\[G]pri l'\[C]occhio fratello scout,
+tutto il \[G]mondo che è intorno a te 
+è una \[A-]cosa meravi\[D-]glio\[G]sa.
+\brk
+\[C]A\[G]pri l'\[C]occhio fratello scout,
+tutto il \[G]mondo che è intorno a te 
+è una \[A-]cosa meravi\[D-]gliosa \brk \[G]da sco\[C]prir. \[G]\[C]
+\endchorus
+\chordsoff
+\beginverse
+Al ^lato del sentier, \brk la pista ancor, fratel, non è bat^tuta
+la ^bussola ti guida senza er^{ror\dots}
+Al ^lato del sentier \brk il mondo è tutta terra scono^sciuta:
+ma ^certo c'è un amico che di ^là ti a^spette^rà.
+\endverse
+\beginverse
+Al ^fuoco del falò \brk la gioia dei fratelli è la più ^pura 
+fa un ^unica gran tenda il vasto ^{ciel\dots}
+Al ^fuoco del falò \brk si sente ancor più limpida e si^cura
+la ^voce che ci vuole esplora^tor sul ^nostro o^nor!
+\endverse
+\endsong
+
+\end{songs}
+
+
+\printindex[alfabetico]
+
+
+\end{document}
